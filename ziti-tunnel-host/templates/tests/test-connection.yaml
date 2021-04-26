@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "ziti-host-apiserver.fullname" . }}-test-connection"
+  labels:
+    {{- include "ziti-host-apiserver.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "ziti-host-apiserver.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never

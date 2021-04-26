@@ -1,6 +1,6 @@
 apiVersion: v2
 name: ziti-host-master
-description: A Helm chart for Kubernetes
+description: Host NetFoundry services on the master node e.g. https://kubernetes.default.svc
 
 # A chart can be either an 'application' or a 'library' chart.
 #

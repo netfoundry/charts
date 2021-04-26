@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  ziti-host-master:
+  - apiVersion: v2
+    appVersion: 0.19.12
+    created: "2021-04-26T11:55:12.971857277-04:00"
+    description: A Helm chart for Kubernetes
+    digest: b8d420dc9c42cba79333dafd4a36464d3d231f98a5d38290c7cb5b787795c982
+    name: ziti-host-master
+    type: application
+    urls:
+    - ziti-host-master-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-04-26T11:55:12.971336707-04:00"

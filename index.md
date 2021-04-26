@@ -27,7 +27,7 @@ NAMESPACE: default
 STATUS: deployed
 REVISION: 1
 NOTES:
-1. This daemonset pod does not provide an ingress configuration or server listener port, only egress from the pod to "endpoint-hosted" services for a NetFoundry network:
+1. This daemonset does not provide an ingress configuration or server listener port, only egress from the pod to "endpoint-hosted" services for a NetFoundry network:
   export POD_NAME=$(kubectl get pods --namespace default -l "app.kubernetes.io/name=ziti-host-master,app.kubernetes.io/instance=ziti-host-master" -o jsonpath="{.items[0].metadata.name}")
 ```
 
@@ -35,3 +35,6 @@ NOTES:
 
 * [GitHub Source for this page](https://github.com/netfoundry/charts)
 * [NetFoundry Developer Portal](https://developer.netfoundry.io/)
+* [Ziti.dev](https://ziti.dev/)
+* [NetFoundry Home](https://netfoundry.io/)
+* [NetFoundry Console](https://nfconsole.io/)

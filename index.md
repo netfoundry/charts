@@ -1,6 +1,6 @@
 ## Helm Charts for NetFoundry Ziti
 
-This repository may be added to [Helm](https://helm.sh/) which is a package manager for [Kubernetes](https://kubernetes.io/). After adding this repository you may then search and install the Helm charts hosted in this repository.
+This is a repository of [Helm](https://helm.sh/) charts for use with [Kubernetes](https://kubernetes.io/). After adding this repository to Helm you may then search and install the charts (packages) hosted in this repository.
 
 ## Add this repo to Helm
 
@@ -30,3 +30,8 @@ NOTES:
 1. This daemonset pod does not provide an ingress configuration or server listener port, only egress from the pod to "endpoint-hosted" services for a NetFoundry network:
   export POD_NAME=$(kubectl get pods --namespace default -l "app.kubernetes.io/name=ziti-host-master,app.kubernetes.io/instance=ziti-host-master" -o jsonpath="{.items[0].metadata.name}")
 ```
+
+## Resources
+
+* [GitHub Source for this page](https://github.com/netfoundry/charts)
+* [NetFoundry Developer Portal](https://developer.netfoundry.io/)

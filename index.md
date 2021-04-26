@@ -1,6 +1,7 @@
-## Helm Charts for NetFoundry Ziti
 
-This is a repository of [Helm](https://helm.sh/) charts for use with [Kubernetes](https://kubernetes.io/). After adding this repository to Helm you may then search and install the charts (packages) hosted in this repository.
+# NetFoundry Helm Charts
+
+This is a repository of [Helm](https://helm.sh/) charts for use with [NetFoundry](https://developer.netfoundry.io) on [Kubernetes](https://kubernetes.io/). After adding this repository to Helm you may then search and install the charts (packages) hosted in this repository.
 
 ## Add this repo to Helm
 

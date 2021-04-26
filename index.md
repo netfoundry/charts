@@ -31,6 +31,26 @@ NOTES:
   export POD_NAME=$(kubectl get pods --namespace default -l "app.kubernetes.io/name=ziti-host-master,app.kubernetes.io/instance=ziti-host-master" -o jsonpath="{.items[0].metadata.name}")
 ```
 
+## Update this repo
+
+```bash
+# add or update a chart named "ziti-host-master" located in the top level of this repo
+helm package ./ziti-host-master && helm repo index . --debug
+```
+
+Merge changes to branch "master" and push to GitHub. GitHub Pages will rebuild the web site to publish the changes. You may verify the rebuild completed by noting the presence of your update in https://netfoundry.github.io/charts/index.yaml. Then you may use the update in Helm.
+
+```bash
+❯ helm repo update && helm search repo netfoundry --versions
+
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "netfoundry" chart repository
+Update Complete. ⎈Happy Helming!⎈
+NAME                            CHART VERSION   APP VERSION     DESCRIPTION                
+netfoundry/ziti-host-master     0.1.1           0.19.12         A Helm chart for Kubernetes
+netfoundry/ziti-host-master     0.1.0           0.19.12         A Helm chart for Kubernetes
+```
+
 ## Resources
 
 * [GitHub Source for this page](https://github.com/netfoundry/charts)

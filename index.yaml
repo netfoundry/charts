@@ -3,32 +3,12 @@ entries:
   ziti-host-master:
   - apiVersion: v2
     appVersion: 0.19.12
-    created: "2021-04-26T12:55:20.309463575-04:00"
+    created: "2021-04-26T23:27:24.265546255-04:00"
     description: Host NetFoundry services on the master node e.g. https://kubernetes.default.svc
-    digest: 11ff54f5ae0c0de0e09634eb126ba2724cf18f54fed462444a8d640ae9a9ba3b
+    digest: b2582284a86fad6e965fdcb66a1e018612ccfb51f26c7a7fb7ed122a83a303a3
     name: ziti-host-master
     type: application
     urls:
-    - ziti-host-master-0.1.2.tgz
-    version: 0.1.2
-  - apiVersion: v2
-    appVersion: 0.19.12
-    created: "2021-04-26T12:55:20.309070029-04:00"
-    description: A Helm chart for Kubernetes
-    digest: fb9bd27a43358c57e03186c0340d7b019481235065f6e84917f3882c5aed0b0e
-    name: ziti-host-master
-    type: application
-    urls:
-    - ziti-host-master-0.1.1.tgz
-    version: 0.1.1
-  - apiVersion: v2
-    appVersion: 0.19.12
-    created: "2021-04-26T12:55:20.308625133-04:00"
-    description: A Helm chart for Kubernetes
-    digest: b8d420dc9c42cba79333dafd4a36464d3d231f98a5d38290c7cb5b787795c982
-    name: ziti-host-master
-    type: application
-    urls:
-    - ziti-host-master-0.1.0.tgz
-    version: 0.1.0
-generated: "2021-04-26T12:55:20.308096713-04:00"
+    - ziti-host-master-1.0.0.tgz
+    version: 1.0.0
+generated: "2021-04-26T23:27:24.264325982-04:00"

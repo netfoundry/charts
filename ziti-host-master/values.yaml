@@ -5,13 +5,21 @@
 ingress:
   enabled: false
 
+persistence:
+  enabled: true
+  accessMode: ReadWriteOnce
+  size: 100Mi
+
 image:
   repository: netfoundry/ziti-tunnel
-  pullPolicy: Never
-#  pullPolicy: Always
+#  pullPolicy: Never
+  pullPolicy: Always
 #  pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: kentest
+#   command: ["sh", "-c", "while true; do sleep 11; done"]
+  args:
+    - "host"  # exec "ziti-tunnel host" to only host, not intercept, no DNS
 
 dnsPolicy: ClusterFirstWithHostNet
 
@@ -37,16 +45,6 @@ securityContext:
   capabilities:
     add:
       - NET_ADMIN
-  # capabilities:
-  #   drop:
-  #   - ALL
-  # readOnlyRootFilesystem: true
-  # runAsNonRoot: true
-  # runAsUser: 1000
-
-service:
-  type: ClusterIP
-  port: 80
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
@@ -62,21 +60,6 @@ resources: {}
 
 ports: []
 
-args:
-  - "host"  # exec "ziti-tunnel host" to only host, not intercept, no DNS
-
-volumeMounts:
-  - mountPath: /netfoundry
-    name: ziti-tunnel-config
-#    readOnly: true
-
-autoscaling:
-  enabled: false
-  minReplicas: 1
-  maxReplicas: 100
-  targetCPUUtilizationPercentage: 80
-  # targetMemoryUtilizationPercentage: 80
-
 nodeSelector:
   kubernetes.io/role: master
 
@@ -84,6 +67,5 @@ tolerations:
   - key: node-role.kubernetes.io/master
     operator: Exists
     effect: NoSchedule
-
 
 affinity: {}

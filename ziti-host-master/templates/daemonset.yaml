@@ -35,13 +35,21 @@ spec:
             {{- toYaml .Values.ports | nindent 12 }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          {{ if .Values.image.command }}
+          command: {{ .Values.image.command }}
+          {{ end }}
           args:
-            {{- toYaml .Values.args | nindent 12 }}
+            {{- toYaml .Values.image.args | nindent 12 }}
           env:
             - name: NF_REG_NAME
               value: {{ .Chart.Name }}
           volumeMounts:
-            {{- toYaml .Values.volumeMounts | nindent 12 }}
+            - mountPath: /enrollment-token
+              name: enrollment-token
+              readOnly: true
+            - mountPath: /netfoundry
+              name: persisted-identity
+              readOnly: false
       hostNetwork: true
       {{- with .Values.nodeSelector }}
       nodeSelector:
@@ -56,6 +64,11 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       volumes:
-        - name: ziti-tunnel-config
+        - name: enrollment-token
           secret:
             secretName: {{ .Chart.Name }}-identity
+        - name: persisted-identity
+          persistentVolumeClaim:
+            claimName: {{ include "ziti-host-master.fullname" . }}
+
+

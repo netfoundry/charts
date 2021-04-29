@@ -50,7 +50,7 @@ spec:
             - mountPath: /netfoundry
               name: persisted-identity
               readOnly: false
-      hostNetwork: true
+      hostNetwork: {{ .Values.hostNetwork }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
@@ -67,6 +67,10 @@ spec:
         - name: enrollment-token
           secret:
             secretName: {{ .Chart.Name }}-identity
+            defaultMode: 0400
+            items:
+            - key: enrollment-token
+              path: {{ .Chart.Name }}.jwt
         - name: persisted-identity
           persistentVolumeClaim:
             claimName: {{ include "ziti-host-master.fullname" . }}

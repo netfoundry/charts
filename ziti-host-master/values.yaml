@@ -41,10 +41,11 @@ podAnnotations: {}
 podSecurityContext: {}
   # fsGroup: 2000
 
-securityContext:
-  capabilities:
-    add:
-      - NET_ADMIN
+hostNetwork: False
+securityContext: {}
+  # capabilities:
+  #   add:
+  #     - NET_ADMIN
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious

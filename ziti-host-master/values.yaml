@@ -61,12 +61,14 @@ resources: {}
 
 ports: []
 
-nodeSelector:
-  kubernetes.io/role: master
+nodeSelector: {}
+#  kubernetes.io/role: master
 
-tolerations:
-  - key: node-role.kubernetes.io/master
-    operator: Exists
-    effect: NoSchedule
+tolerations: []
+  # - key: node-role.kubernetes.io/master
+  #   operator: Exists
+  #   effect: NoSchedule
 
 affinity: {}
+
+replicas: 1

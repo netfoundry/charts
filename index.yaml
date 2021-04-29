@@ -3,7 +3,17 @@ entries:
   ziti-host-master:
   - apiVersion: v2
     appVersion: 0.19.12
-    created: "2021-04-26T23:27:24.265546255-04:00"
+    created: "2021-04-29T17:28:15.151886448-04:00"
+    description: Host NetFoundry services on the master node e.g. https://kubernetes.default.svc
+    digest: bd7cac30cdac9764a1a718f429f08c7d055a02c80ac95c9f9a05bad9cb366546
+    name: ziti-host-master
+    type: application
+    urls:
+    - ziti-host-master-1.1.0.tgz
+    version: 1.1.0
+  - apiVersion: v2
+    appVersion: 0.19.12
+    created: "2021-04-29T17:28:15.151548499-04:00"
     description: Host NetFoundry services on the master node e.g. https://kubernetes.default.svc
     digest: b2582284a86fad6e965fdcb66a1e018612ccfb51f26c7a7fb7ed122a83a303a3
     name: ziti-host-master
@@ -11,4 +21,4 @@ entries:
     urls:
     - ziti-host-master-1.0.0.tgz
     version: 1.0.0
-generated: "2021-04-26T23:27:24.264325982-04:00"
+generated: "2021-04-29T17:28:15.150612696-04:00"

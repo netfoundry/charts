@@ -1,9 +1,20 @@
 apiVersion: v1
 entries:
+  hello-netfoundry:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2021-05-01T19:23:29.642046876-04:00"
+    description: Run the lightweight NetFoundry hello web server
+    digest: 5865d8a6027b88f5b6d521559385baf0c8967e57f44bf67e11cf6a99743612a0
+    name: hello-netfoundry
+    type: application
+    urls:
+    - hello-netfoundry-0.1.0.tgz
+    version: 0.1.0
   ziti-host:
   - apiVersion: v2
     appVersion: 0.19.12
-    created: "2021-05-01T13:14:04.911840669-04:00"
+    created: "2021-05-01T19:23:29.642382639-04:00"
     description: Host NetFoundry services with a single replica pod
     digest: ec447c253fb87905da60c6363c0d3d1fabb7101a0ff019e0ab903c048d1b556a
     name: ziti-host
@@ -14,7 +25,7 @@ entries:
   ziti-host-master:
   - apiVersion: v2
     appVersion: 0.19.12
-    created: "2021-05-01T13:14:04.912620268-04:00"
+    created: "2021-05-01T19:23:29.643084693-04:00"
     description: Host NetFoundry services on the master node e.g. https://kubernetes.default.svc
     digest: bd7cac30cdac9764a1a718f429f08c7d055a02c80ac95c9f9a05bad9cb366546
     name: ziti-host-master
@@ -24,7 +35,7 @@ entries:
     version: 1.1.0
   - apiVersion: v2
     appVersion: 0.19.12
-    created: "2021-05-01T13:14:04.912285534-04:00"
+    created: "2021-05-01T19:23:29.642780212-04:00"
     description: Host NetFoundry services on the master node e.g. https://kubernetes.default.svc
     digest: b2582284a86fad6e965fdcb66a1e018612ccfb51f26c7a7fb7ed122a83a303a3
     name: ziti-host-master
@@ -32,4 +43,4 @@ entries:
     urls:
     - ziti-host-master-1.0.0.tgz
     version: 1.0.0
-generated: "2021-05-01T13:14:04.91072956-04:00"
+generated: "2021-05-01T19:23:29.641600391-04:00"

@@ -16,7 +16,7 @@ image:
   pullPolicy: Always
 #  pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: helmtest  # TODO: remove after /enrollment-token is available in next release of ziti-tunnel
+#  tag: helmtest
 #   command: ["sh", "-c", "while true; do sleep 11; done"]
   args:
     - "host"  # exec "ziti-tunnel host" to only host, not intercept, no DNS

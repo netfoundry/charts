@@ -20,6 +20,8 @@ image:
 #   command: ["sh", "-c", "while true; do sleep 11; done"]
   args:
     - "host"  # exec "ziti-tunnel host" to only host, not intercept, no DNS
+    - "--svcPollRate"
+    - "15"
 
 dnsPolicy: ClusterFirstWithHostNet
 

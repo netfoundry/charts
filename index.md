@@ -14,15 +14,15 @@ This is a repository of [Helm](https://helm.sh/) charts for use with [NetFoundry
 
 ```bash
 ❯ helm search repo netfoundry
-NAME                            CHART VERSION   APP VERSION     DESCRIPTION                
-netfoundry/ziti-host-master     0.1.0           0.19.12         A Helm chart for Kubernetes
+NAME                     CHART VERSION   APP VERSION     DESCRIPTION                
+netfoundry/ziti-host     0.1.0           0.19.12         A Helm chart for Kubernetes
 ```
 
 ## Install a chart from this repo
 
 ```bash
-❯ helm install ziti-host-master netfoundry/ziti-host-master --set-file enrollmentToken=./Linux1.jwt
-NAME: ziti-host-master
+❯ helm install ziti-host netfoundry/ziti-host --set-file enrollmentToken=./Linux1.jwt
+NAME: ziti-host
 LAST DEPLOYED: Mon Apr 26 12:19:05 2021
 NAMESPACE: default
 STATUS: deployed
@@ -47,9 +47,9 @@ Merge changes to branch "master" and push to GitHub. GitHub Pages will rebuild t
 Hang tight while we grab the latest from your chart repositories...
 ...Successfully got an update from the "netfoundry" chart repository
 Update Complete. ⎈Happy Helming!⎈
-NAME                            CHART VERSION   APP VERSION     DESCRIPTION                
-netfoundry/ziti-host-master     0.1.1           0.19.12         A Helm chart for Kubernetes
-netfoundry/ziti-host-master     0.1.0           0.19.12         A Helm chart for Kubernetes
+NAME                     CHART VERSION   APP VERSION     DESCRIPTION                
+netfoundry/ziti-host     0.1.1           0.19.12         A Helm chart for Kubernetes
+netfoundry/ziti-host     0.1.0           0.19.12         A Helm chart for Kubernetes
 ```
 
 ## Resources

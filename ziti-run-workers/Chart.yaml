@@ -1,6 +1,6 @@
 apiVersion: v2
 name: ziti-run-workers
-description: Run the Ziti tunneler on selected worker nodes
+description: Run the Ziti tunneler on all worker nodes
 
 # A chart can be either an 'application' or a 'library' chart.
 #

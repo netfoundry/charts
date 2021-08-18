@@ -11,17 +11,17 @@ persistence:
   size: 100Mi
 
 image:
-  repository: netfoundry/ziti-tunnel
+  repository: netfoundry/ziti-edge-tunnel
 #  pullPolicy: Never
-  pullPolicy: Always
-#  pullPolicy: IfNotPresent
+#  pullPolicy: Always
+  pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: helmtest  # TODO: remove after /enrollment-token is available in next release of ziti-tunnel
+#  tag: helmtest
 #   command: ["sh", "-c", "while true; do sleep 11; done"]
   args:
-    - "host"  # exec "ziti-tunnel host" to only host, not intercept, no DNS
+    - --verbose=4
 
-dnsPolicy: ClusterFirstWithHostNet
+dnsPolicy: Default
 
 imagePullSecrets: []
 nameOverride: ""
@@ -61,8 +61,8 @@ resources: {}
 
 ports: []
 
-nodeSelector: {}
-#  kubernetes.io/role: master
+nodeSelector:
+  kubernetes.io/role: worker
 
 tolerations: []
   # - key: node-role.kubernetes.io/master

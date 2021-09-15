@@ -3,14 +3,13 @@
 # Declare variables to be passed into your templates.
 
 service:
-  name: hello-netfoundry
   type: ClusterIP
   port: 80
 
-ingress:
-  enabled: false
+#releaseNameOverride: hello-acme              # default is .Chart.Name
+#serviceDomainName: hello-acme-domain-name    # default is {{release name}}-{{.Chart.Name}}
 
-persistence:
+ingress:
   enabled: false
 
 image:
@@ -23,17 +22,6 @@ image:
 dnsPolicy: ClusterFirstWithHostNet
 
 imagePullSecrets: []
-nameOverride: ""
-fullnameOverride: hello-netfoundry
-
-serviceAccount:
-  # Specifies whether a service account should be created
-  create: false
-  # Annotations to add to the service account
-  annotations: {}
-  # The name of the service account to use.
-  # If not set and create is true, a name is generated using the fullname template
-  name: ""
 
 podAnnotations: {}
 
@@ -74,3 +62,15 @@ tolerations: []
 affinity: {}
 
 replicas: 1
+
+persistence:
+  enabled: false
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: false
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""

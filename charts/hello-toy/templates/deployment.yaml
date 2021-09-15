@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "hello-netfoundry.fullname" . }}
+  name: {{ include "hello-netfoundry.name" . }}
   labels:
     {{- include "hello-netfoundry.labels" . | nindent 4 }}
 spec:

@@ -1,37 +1,61 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/netfoundry/charts/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+# NetFoundry Helm Charts
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This is a repository of [Helm](https://helm.sh/) charts for use with [NetFoundry](https://developer.netfoundry.io) on [Kubernetes](https://kubernetes.io/). After adding this repository to Helm you may then search and install the charts (packages) hosted in this repository.
 
-### Markdown
+## Add this repo to Helm
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```bash
+❯ helm repo add netfoundry https://netfoundry.github.io/charts/                                                                                               
+"netfoundry" has been added to your repositories                         
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Search for available charts in this repo
 
-### Jekyll Themes
+```bash
+❯ helm search repo netfoundry
+NAME                     CHART VERSION   APP VERSION     DESCRIPTION                
+netfoundry/ziti-host     0.1.0           0.19.12         A Helm chart for Kubernetes
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/netfoundry/charts/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Install a chart from this repo
 
-### Support or Contact
+```bash
+❯ helm install ziti-host netfoundry/ziti-host --set-file enrollmentToken=./Linux1.jwt
+NAME: ziti-host
+LAST DEPLOYED: Mon Apr 26 12:19:05 2021
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+NOTES:
+1. This deployment does not provide an ingress / server port, only egress from the pod to any `serverEgress` destinations you configure in a NetFoundry network e.g. https://kubernetes.default.svc:443:
+  export POD_NAME=$(kubectl get pods --namespace default -l "app.kubernetes.io/name=ziti-host-master,app.kubernetes.io/instance=ziti-host-master" -o jsonpath="{.items[0].metadata.name}")
+```
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Update this repo
+
+```bash
+# add or update a chart named "ziti-host-master" located in the top level of this repo
+helm package ./ziti-host-master && helm repo index . --debug
+```
+
+Merge changes to branch "master" and push to GitHub. GitHub Pages will rebuild the web site to publish the changes. You may verify the rebuild completed by noting the presence of your update in https://netfoundry.github.io/charts/index.yaml. Then you may use the update in Helm.
+
+```bash
+❯ helm repo update && helm search repo netfoundry --versions
+
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "netfoundry" chart repository
+Update Complete. ⎈Happy Helming!⎈
+NAME                     CHART VERSION   APP VERSION     DESCRIPTION                
+netfoundry/ziti-host     0.1.1           0.19.12         A Helm chart for Kubernetes
+netfoundry/ziti-host     0.1.0           0.19.12         A Helm chart for Kubernetes
+```
+
+## Resources
+
+* [GitHub Source for this page](https://github.com/netfoundry/charts)
+* [NetFoundry Developer Portal](https://developer.netfoundry.io/)
+* [Ziti.dev](https://ziti.dev/)
+* [NetFoundry Home](https://netfoundry.io/)
+* [NetFoundry Console](https://nfconsole.io/)

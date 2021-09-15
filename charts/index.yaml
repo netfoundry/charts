@@ -3,9 +3,9 @@ entries:
   hello-toy:
   - apiVersion: v2
     appVersion: latest
-    created: "2021-06-30T17:53:40.508447481-04:00"
+    created: "2021-09-15T05:04:07.244472387-04:00"
     description: Run the lightweight toy web server
-    digest: 4ab7b1e41e4df3c28ca38f646c56649bf484cbac1b616d63a2eba1d7995f9e51
+    digest: 63a6b6ed0b503902aa8848e8c6a4c1e4dee9553eac9576867fc63dd794c2429b
     name: hello-toy
     type: application
     urls:
@@ -13,10 +13,20 @@ entries:
     version: 1.1.0
   ziti-host:
   - apiVersion: v2
-    appVersion: 0.20.10
-    created: "2021-06-30T17:53:40.510435168-04:00"
+    appVersion: 0.21.0
+    created: "2021-09-15T05:04:07.246850158-04:00"
     description: Host NetFoundry services with a single replica pod
-    digest: 5671b9feb53c3607a913e5eb384afcc17df6121c2097fcec3290f7ab1b5a644f
+    digest: 5029ed466e2dd1d81570421397dfcb624439791676d52f512c88d654ab743b63
+    name: ziti-host
+    type: application
+    urls:
+    - ziti-host-1.3.5.tgz
+    version: 1.3.5
+  - apiVersion: v2
+    appVersion: 0.20.10
+    created: "2021-09-15T05:04:07.246552495-04:00"
+    description: Host NetFoundry services with a single replica pod
+    digest: dc3fc9018bdf8ea14707c139fb3e4257a05273d82c039270908152adf050bee5
     name: ziti-host
     type: application
     urls:
@@ -24,7 +34,7 @@ entries:
     version: 1.3.3
   - apiVersion: v2
     appVersion: 0.20.0
-    created: "2021-06-30T17:53:40.510098519-04:00"
+    created: "2021-09-15T05:04:07.246227239-04:00"
     description: Host NetFoundry services with a single replica pod
     digest: a21f1a904320aa747192adf0cf816b711a92a5338e2ac348c81f349150563151
     name: ziti-host
@@ -34,7 +44,7 @@ entries:
     version: 1.3.2
   - apiVersion: v2
     appVersion: 0.20.0
-    created: "2021-06-30T17:53:40.509531921-04:00"
+    created: "2021-09-15T05:04:07.245565908-04:00"
     description: Host NetFoundry services with a single replica pod
     digest: a29a8f7e505ae7cd774746e6a6b9d93a78e61a86984a74118027cd32d7160f19
     name: ziti-host
@@ -44,7 +54,7 @@ entries:
     version: 1.3.1
   - apiVersion: v2
     appVersion: 0.19.12
-    created: "2021-06-30T17:53:40.509182787-04:00"
+    created: "2021-09-15T05:04:07.245158767-04:00"
     description: Host NetFoundry services with a single replica pod
     digest: b27b7d89679b46cee3ad447783b0f62d539dbf10c1c665eaa7b6bd35d9a4669c
     name: ziti-host
@@ -54,7 +64,7 @@ entries:
     version: 1.3.0
   - apiVersion: v2
     appVersion: 0.19.12
-    created: "2021-06-30T17:53:40.508808754-04:00"
+    created: "2021-09-15T05:04:07.244815273-04:00"
     description: Host NetFoundry services with a single replica pod
     digest: ec447c253fb87905da60c6363c0d3d1fabb7101a0ff019e0ab903c048d1b556a
     name: ziti-host
@@ -65,7 +75,7 @@ entries:
   ziti-host-master:
   - apiVersion: v2
     appVersion: 0.19.12
-    created: "2021-06-30T17:53:40.511193385-04:00"
+    created: "2021-09-15T05:04:07.247156276-04:00"
     description: Host NetFoundry services on the master node e.g. https://kubernetes.default.svc
     digest: bd7cac30cdac9764a1a718f429f08c7d055a02c80ac95c9f9a05bad9cb366546
     name: ziti-host-master
@@ -73,14 +83,4 @@ entries:
     urls:
     - ziti-host-master-1.1.0.tgz
     version: 1.1.0
-  - apiVersion: v2
-    appVersion: 0.19.12
-    created: "2021-06-30T17:53:40.510840559-04:00"
-    description: Host NetFoundry services on the master node e.g. https://kubernetes.default.svc
-    digest: b2582284a86fad6e965fdcb66a1e018612ccfb51f26c7a7fb7ed122a83a303a3
-    name: ziti-host-master
-    type: application
-    urls:
-    - ziti-host-master-1.0.0.tgz
-    version: 1.0.0
-generated: "2021-06-30T17:53:40.507909814-04:00"
+generated: "2021-09-15T05:04:07.243619388-04:00"

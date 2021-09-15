@@ -3,84 +3,94 @@ entries:
   hello-toy:
   - apiVersion: v2
     appVersion: latest
-    created: "2021-06-30T17:53:40.508447481-04:00"
+    created: "2021-09-15T05:29:34.244027254-04:00"
     description: Run the lightweight toy web server
-    digest: 4ab7b1e41e4df3c28ca38f646c56649bf484cbac1b616d63a2eba1d7995f9e51
+    digest: e28a238782894089b3f69d6f15cd72157c6f856a12807ea9e232137009617abc
     name: hello-toy
     type: application
     urls:
-    - hello-toy-1.1.0.tgz
+    - https://netfoundry.github.io/charts/hello-toy-1.1.0.tgz
     version: 1.1.0
   ziti-host:
   - apiVersion: v2
+    appVersion: 0.21.0
+    created: "2021-09-15T05:29:34.246616714-04:00"
+    description: Host NetFoundry services with a single replica pod
+    digest: 70e062c4a30b22e0c07134860f40c7c11a49b213913196a00371b0c23fea2218
+    name: ziti-host
+    type: application
+    urls:
+    - https://netfoundry.github.io/charts/ziti-host-1.3.5.tgz
+    version: 1.3.5
+  - apiVersion: v2
     appVersion: 0.20.10
-    created: "2021-06-30T17:53:40.510435168-04:00"
+    created: "2021-09-15T05:29:34.246281051-04:00"
     description: Host NetFoundry services with a single replica pod
     digest: 5671b9feb53c3607a913e5eb384afcc17df6121c2097fcec3290f7ab1b5a644f
     name: ziti-host
     type: application
     urls:
-    - ziti-host-1.3.3.tgz
+    - https://netfoundry.github.io/charts/ziti-host-1.3.3.tgz
     version: 1.3.3
   - apiVersion: v2
     appVersion: 0.20.0
-    created: "2021-06-30T17:53:40.510098519-04:00"
+    created: "2021-09-15T05:29:34.245926561-04:00"
     description: Host NetFoundry services with a single replica pod
     digest: a21f1a904320aa747192adf0cf816b711a92a5338e2ac348c81f349150563151
     name: ziti-host
     type: application
     urls:
-    - ziti-host-1.3.2.tgz
+    - https://netfoundry.github.io/charts/ziti-host-1.3.2.tgz
     version: 1.3.2
   - apiVersion: v2
     appVersion: 0.20.0
-    created: "2021-06-30T17:53:40.509531921-04:00"
+    created: "2021-09-15T05:29:34.245600002-04:00"
     description: Host NetFoundry services with a single replica pod
     digest: a29a8f7e505ae7cd774746e6a6b9d93a78e61a86984a74118027cd32d7160f19
     name: ziti-host
     type: application
     urls:
-    - ziti-host-1.3.1.tgz
+    - https://netfoundry.github.io/charts/ziti-host-1.3.1.tgz
     version: 1.3.1
   - apiVersion: v2
     appVersion: 0.19.12
-    created: "2021-06-30T17:53:40.509182787-04:00"
+    created: "2021-09-15T05:29:34.245277693-04:00"
     description: Host NetFoundry services with a single replica pod
     digest: b27b7d89679b46cee3ad447783b0f62d539dbf10c1c665eaa7b6bd35d9a4669c
     name: ziti-host
     type: application
     urls:
-    - ziti-host-1.3.0.tgz
+    - https://netfoundry.github.io/charts/ziti-host-1.3.0.tgz
     version: 1.3.0
   - apiVersion: v2
     appVersion: 0.19.12
-    created: "2021-06-30T17:53:40.508808754-04:00"
+    created: "2021-09-15T05:29:34.244781388-04:00"
     description: Host NetFoundry services with a single replica pod
     digest: ec447c253fb87905da60c6363c0d3d1fabb7101a0ff019e0ab903c048d1b556a
     name: ziti-host
     type: application
     urls:
-    - ziti-host-0.1.0.tgz
+    - https://netfoundry.github.io/charts/ziti-host-0.1.0.tgz
     version: 0.1.0
   ziti-host-master:
   - apiVersion: v2
     appVersion: 0.19.12
-    created: "2021-06-30T17:53:40.511193385-04:00"
+    created: "2021-09-15T05:29:34.247351654-04:00"
     description: Host NetFoundry services on the master node e.g. https://kubernetes.default.svc
-    digest: bd7cac30cdac9764a1a718f429f08c7d055a02c80ac95c9f9a05bad9cb366546
+    digest: a03ca721002511df12e6576e8905f6c23274ee01fadbde5fce43bb2cea5053f2
     name: ziti-host-master
     type: application
     urls:
-    - ziti-host-master-1.1.0.tgz
+    - https://netfoundry.github.io/charts/ziti-host-master-1.1.0.tgz
     version: 1.1.0
   - apiVersion: v2
     appVersion: 0.19.12
-    created: "2021-06-30T17:53:40.510840559-04:00"
+    created: "2021-09-15T05:29:34.247013028-04:00"
     description: Host NetFoundry services on the master node e.g. https://kubernetes.default.svc
     digest: b2582284a86fad6e965fdcb66a1e018612ccfb51f26c7a7fb7ed122a83a303a3
     name: ziti-host-master
     type: application
     urls:
-    - ziti-host-master-1.0.0.tgz
+    - https://netfoundry.github.io/charts/ziti-host-master-1.0.0.tgz
     version: 1.0.0
-generated: "2021-06-30T17:53:40.507909814-04:00"
+generated: "2021-09-15T05:29:34.243457397-04:00"

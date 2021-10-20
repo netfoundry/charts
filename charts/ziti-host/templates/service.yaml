@@ -43,7 +43,7 @@ spec:
             {{- toYaml .Values.image.args | nindent 12 }}
           env:
             - name: NF_REG_NAME
-              value: {{ .Chart.Name }}
+              value: {{ include "ziti-host.fullname" . }}-identity
           volumeMounts:
             - mountPath: /enrollment-token
               name: enrollment-token
@@ -67,11 +67,11 @@ spec:
       volumes:
         - name: enrollment-token
           secret:
-            secretName: {{ .Chart.Name }}-identity
+            secretName: {{ include "ziti-host.fullname" . }}-identity
             defaultMode: 0400
             items:
             - key: enrollment-token
-              path: {{ .Chart.Name }}.jwt
+              path: {{ include "ziti-host.fullname" . }}-identity.jwt
         - name: persisted-identity
           persistentVolumeClaim:
             claimName: {{ include "ziti-host.fullname" . }}

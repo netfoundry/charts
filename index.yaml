@@ -37,6 +37,16 @@ entries:
     version: 1.1.0
   ziti-host:
   - apiVersion: v2
+    appVersion: 0.25.2
+    created: "2022-05-03T13:52:57.91924655Z"
+    description: Host OpenZiti services with a pod
+    digest: 199ee0e2a8fd89a2101a2f6133bd29df620365dafb911d2c8adb3679d9dafbe1
+    name: ziti-host
+    type: application
+    urls:
+    - https://github.com/netfoundry/charts/releases/download/ziti-host-1.6.0/ziti-host-1.6.0.tgz
+    version: 1.6.0
+  - apiVersion: v2
     appVersion: 0.24.12
     created: "2022-03-03T22:55:35.53477713Z"
     description: Host NetFoundry services with a single replica pod
@@ -97,4 +107,4 @@ entries:
     urls:
     - https://github.com/netfoundry/charts/releases/download/ziti-host-master-1.1.0/ziti-host-master-1.1.0.tgz
     version: 1.1.0
-generated: "2022-03-03T22:55:35.534803331Z"
+generated: "2022-05-03T13:52:57.919271951Z"

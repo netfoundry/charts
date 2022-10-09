@@ -36,6 +36,6 @@ NOTES:
 
 * [GitHub Source for this page](https://github.com/netfoundry/charts)
 * [NetFoundry Developer Portal](https://developer.netfoundry.io/)
-* [Ziti.dev](https://ziti.dev/)
+* [OpenZiti](https://openziti.org/)
 * [NetFoundry Home](https://netfoundry.io/)
 * [NetFoundry Console](https://nfconsole.io/)
